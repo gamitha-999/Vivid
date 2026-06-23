@@ -26,7 +26,25 @@ function HeroSection() {
 
   return (
     <section className="relative min-h-[80dvh] md:min-h-dvh flex flex-col items-center justify-center px-4 md:px-6 pt-16 md:pt-20 pb-8 md:pb-10 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/1.jpg"
+          alt="iPhone filter preview"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      </div>
       <motion.div style={!isMobile ? { y, opacity } : undefined} className="relative z-10 text-center max-w-4xl mx-auto w-full">
+        <div className="relative inline-block">
+          <img
+            src="/images/22.jpg"
+            alt="iPhone filter demonstration"
+            className="w-full max-w-lg mx-auto rounded-2xl shadow-2xl border border-white/10"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-2xl" />
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

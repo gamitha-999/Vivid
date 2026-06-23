@@ -3,7 +3,6 @@
 import { useEffect, type ReactNode } from 'react'
 import { useUIStore } from '@/store/uiStore'
 import { useIsMobile } from '@/hooks/useMediaQuery'
-import CustomCursor from '@/components/ui/CustomCursor'
 import NoiseOverlay from '@/components/effects/NoiseOverlay'
 import Particles from '@/components/effects/Particles'
 import GradientMesh from '@/components/effects/GradientMesh'
@@ -36,7 +35,6 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
       {!isMobile && <AuroraLights />}
       <Particles />
       <NoiseOverlay />
-      {!isMobile && <CustomCursor />}
       {children}
     </>
   )
